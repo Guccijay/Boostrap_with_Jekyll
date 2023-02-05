@@ -40,7 +40,7 @@ jobs:
       run: |
         echo "Job: ${GITHUB_JOB}\nBuild: ${GITHUB_RUN_NUMBER}" > ./_gh_pages/version.txt
     - name: Publish to S3
-      uses: aws-actions/upload-to-s3@v1
+      uses: shallwefootball/s3-upload-action@master
       with:
         args: _gh_pages
         bucket: ${{ env.S3_BUCKET }}
