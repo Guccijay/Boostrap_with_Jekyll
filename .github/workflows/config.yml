@@ -25,8 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        gem install bundler
-        whoami
+        gem install bundler     
         bundle install
     - name: Build site
       run: |
